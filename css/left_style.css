@@ -1,0 +1,31 @@
+.personal_file img{
+	position: relative;
+	left: 20px;
+	top: 12px;
+	width: 120px;
+	height: 120px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+.font{
+	position: absolute;
+	top: 150px;
+	width: 160px;
+	padding-left: 31px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+}
+.description{
+	position: absolute;
+	top: 280px;
+	width: 160px;
+	height: 30px;
+	font-size: 15px;
+	padding-left: 5px;
+	color: #666666;
+}
+.details{
+	font-size: 13px;
+	color: #666666;
+}
