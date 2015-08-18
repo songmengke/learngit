@@ -20,6 +20,24 @@ body{
 	font-size: 15px;
 	line-height: 30px;
 }
+.top_left{
+	position: absolute;
+	left: 0px;
+	width: 200px;
+	height: 30px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 30px;
+}
+.top_left a{
+	text-decoration: none;
+	color: #fff;
+}
+.top_left a:hover{
+	color: #666666;
+	text-decoration: underline;
+	text-transform: 
+}
 .top_right a{
 	color: #fff;
 	font-size: 15px;
@@ -107,7 +125,7 @@ body{
 	margin-top: 20px;
 	margin-left: 30px;
 	width: 160px;
-	height: 250px;
+	height: 320px;
 	background: #fff;
 	border-radius: 9px;
 	border: 1px solid #8FD5EF;
