@@ -3,10 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./css/top_style.css"/>
+	<link rel="stylesheet" href="./css/left_style.css"/>
 	<title>我的个人博客系统</title>
 </head>
 <body>
 	<div class="top">
+		<div class="top_left">
+			<a href="admin_login.html">管理员登录</a>
+		</div>
 		<div class="top_right">
 			<?php
 				session_start();
@@ -47,12 +51,24 @@
 		<div class="main_body_left">
 			<div class="main_body_left_1">
 				<h2>个人资料</h2>
+				<div class="personal_file">
+					<img src="./images/erha.jpg" alt="博主头像"/>
+					<div class="font">攻城狮_宋梦科</div>
+					<div class="description">
+						原创:100篇  &nbsp;转载:100篇 <br/>
+						译文:10篇  &nbsp;&nbsp;评论:65656
+					</div>
+				</div>
 			</div>
 			<div class="main_body_left_2">
 				<h2>博主简介</h2>
+				<div class="details">
+					 &nbsp;&nbsp;宋梦科，在阿豆工作室和领航工作室学习过PHP开发和前端开发，参加过全国青年APP大赛和大学生服务外包创新大赛以及ST ARM智能设备创新大赛，在学校举办的第一届移动互联网应用设计大赛中拿过二等奖，现在胡威老师的嵌入式与智能机器人研究室跟项目，与2015年大二暑假期间建立此博客，用来做作为数据库的课程设计内容，博客系统本身有诸多不合理的地方希望浏览者多多指正，但是主要功能还是讨论前沿技术，发挥共享精神，将作者的看法借助博客表达出来。
+				</div>
 			</div>
 			<div class="main_body_left_3">
 				<h2>近期文章</h2>
+
 			</div>
 			<div class="main_body_left_4">
 				<h2>近期评论</h2>
