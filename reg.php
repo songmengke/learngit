@@ -8,6 +8,8 @@
 	$username=$_POST['username'];
 	$password=$_POST['password'];
 	$mailbox=$_POST['mailbox'];
+
+	$checkcode=$_POST['checkcode'];
 	$dat1=date('Y-m-j');
 	$dat2=date('G:i:s');
 	$dat=$dat1.' '.$dat2;
@@ -23,8 +25,13 @@
 	$sql="INSERT INTO user(userNickname,userName,userPwd,userMailBox,userRegTime)VALUES('$nickname','$username','$password','$mailbox','$dat')";
 	$result=mysql_query($sql)or die("query fail".mysql_error());
 	if($result){
-		$_SESSION['name']="$username";
-		echo "<script> alert('注册成功');window.location.href='index.php'</script>";
+		if($checkcode==$_SESSION['checkpic']){
+			$_SESSION['name']="$username";
+			echo "<script> alert('注册成功');window.location.href='index.php'</script>";
+		}
+		else{
+			echo "<script> alert('验证码错误,请重新输入');window.location.href='reg.html'</script>";
+		}
 	}
 	else{
 		echo "<script> alert('注册失败');window.location.href='reg.html'</script>";	

@@ -42,7 +42,7 @@
 				<li><a href="index.php">主页</a></li>
 				<li><a href="#">文章</a></li>
 				<li><a href="#">照片</a></li>
-				<li><a href="#">关于博主</a></li>
+				<li><a href="http://user.qzone.qq.com/527730241/main">关于博主</a></li>
 			</ul>
 		</div>
 	</div>
@@ -68,13 +68,39 @@
 			</div>
 			<div class="main_body_left_3">
 				<h2>近期文章</h2>
+				<div>
+					<?php
+						$art="SELECT * FROM article_list limit 0,4";
+						$result1=mysql_query($art);
+						while($myrow1=mysql_fetch_array($result1)){
+					?>
 
+						<a href="userCom.php?articleID=<?php echo $myrow1['artId'];?>">
+							<?php echo $myrow1['artTitle'];?>
+						</a><br/>
+
+					<?php	
+						}
+					?>
+				</div>
 			</div>
 			<div class="main_body_left_4">
 				<h2>近期评论</h2>
 			</div>
 			<div class="main_body_left_5">
 				<h2>文章归档</h2>
+				<div class="art_guidang">
+					<a href="#">2015年8月&nbsp;(1)</a><br>
+					<a href="#">2014年2月&nbsp;(1)</a><br>
+					<a href="#">2014年3月&nbsp;(1)</a><br>
+					<a href="#">2014年4月&nbsp;(1)</a><br>
+					<a href="#">2014年5月&nbsp;(1)</a><br>
+					<a href="#">2014年6月&nbsp;(1)</a><br>
+					<a href="#">2014年7月&nbsp;(1)</a><br>
+					<a href="#">2014年8月&nbsp;(1)</a><br>
+					<a href="#">2014年9月&nbsp;(1)</a><br>
+					<a href="#">2014年10月&nbsp;(1)</a>
+				</div>
 			</div>
 			<div class="main_body_left_6">
 				<h2>分类目录</h2>
@@ -84,8 +110,6 @@
 
 		<div class="main_body_right">
 			<?php
-				/*define("ROOT",dirname(__FILE__));    
-				set_include_path(".".PATH_SEPARATOR.ROOT."/lib".PATH_SEPARATOR.ROOT."./core".PATH_SEPARATOR.ROOT."./configs".PATH_SEPARATOR.get_include_path());*/
 				require_once("config.php");
 				require_once("connect.php");
 				$result=mysql_query("select * from article_list order by artId");
@@ -94,9 +118,11 @@
 			<div class="main_body_right_1">
 				<div class="main_body_right_title">
 					<h2>
-						<?php
-							echo $myrow['artTitle'];
-						?>
+						<a href="userCom.php?articleID=<?php echo $myrow['artId'];?>">
+							<?php
+								echo $myrow['artTitle'];
+							?>
+						</a>
 					</h2>
 				</div>
 

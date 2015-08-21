@@ -13,6 +13,9 @@
 		set_include_path(".".PATH_SEPARATOR.ROOT."/lib".PATH_SEPARATOR.ROOT."./core".PATH_SEPARATOR.ROOT."./configs".PATH_SEPARATOR.get_include_path());
 		require_once("config.php");
 		require_once("connect.php");
+		if(!$_SESSION['name']){
+			echo "<script> alert('登录之后才能发表回复');window.location.href='login.html'</script>";
+		}
 		$username=$_SESSION['name'];
 		$sql2="SELECT * FROM com_list WHERE comId = '$com_id'";
 		$result2=mysql_query($sql2);

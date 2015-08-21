@@ -29,3 +29,32 @@
 	font-size: 13px;
 	color: #666666;
 }
+.main_body_left_3 div{
+	margin-top: 15px;
+	width: 160px;
+	height: 200px;
+	text-align: center;
+}
+.main_body_left_3 a{
+	text-decoration: none;
+	color: #666666;
+	font-size: 13px;
+}
+.main_body_left_3 a:hover{
+	text-decoration: underline;
+	color: #116AFA;
+}
+.art_guidang{
+	text-align: center;
+	margin-top: 15px;
+	width: 160px;
+}
+.art_guidang a{
+	text-decoration: none;
+	color: #666666;
+	font-size: 13px;
+}
+.art_guidang a:hover{
+	text-decoration: underline;
+	color: #116AFA;
+}
